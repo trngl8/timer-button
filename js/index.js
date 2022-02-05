@@ -1,7 +1,5 @@
-const buttonTimer = document.querySelector('#btn-timer');
-buttonTimer.addEventListener('click', () => {
-    timer.start()
-}); 
+const buttonStart = document.querySelector('#btn-start');
+const buttonStop = document.querySelector('#btn-stop');
 //конст дата
 const tHours = document.querySelector('[data-hours]');
 const tMinutes = document.querySelector('[data-minutes]');
@@ -10,10 +8,11 @@ const tSeconds = document.querySelector('[data-seconds]');
 
 
 const timer = {
+    intervalId: null,
     start() {
         const startTime = Date.now(); 
         
-        setInterval(() => {
+        this.intervalId = setInterval(() => {
             const currentTime = Date.now(); 
             const deltaTime = currentTime - startTime; 
             const { hours, minute, sec } = getTimeComponents(deltaTime);
@@ -21,10 +20,18 @@ const timer = {
             tHours.textContent = hours;
             tMinutes.textContent = minute;
             tSeconds.textContent = sec;
-            // console.log(`${hours}:${minute}:${sec}`);
         }, 1000);
     },
+    stop() {
+        clearInterval(this.intervalId);
+    }
 };
+buttonStart.addEventListener('click', () => {
+    timer.start()
+}); 
+buttonStop.addEventListener('click', () => {
+    timer.stop()
+});
 
 
 function pad(value) {
@@ -38,3 +45,5 @@ function getTimeComponents(time) {
 
     return { hours, minute, sec }; 
 }
+
+  // console.log(`${hours}:${minute}:${sec}`);
