@@ -17,22 +17,38 @@ h1, h2, h3, h4, h5, h6 {
 img {
     width: 100%;
 }
-
-.btn-timer {
+.hero{
+    margin-bottom: 50px;
+}
+.btn-start {
     display: block;
     max-width: 200px;
     margin: 0 auto;
     color: white;
     background-color: black;
 }
-.btn-timer:hover {
+.btn-start:hover {
     color: black;
     background-color: white;
+}
+
+.btn-stop {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+    color: black;
+    background-color: white;
+}
+
+.btn-stop:hover {
+    color: white;
+    background-color: black;
 }
 
 .timer-value {
     display: flex;
     margin: 0 auto;
+    margin-bottom: 50px;
     text-align: center;
     justify-content: center;
 }
