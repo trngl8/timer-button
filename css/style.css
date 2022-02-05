@@ -1,0 +1,49 @@
+
+
+header, footer, section {
+    padding: 100px 0;
+}
+
+header {
+    padding: 200px 0;
+    background-color: black;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+
+.btn-timer {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+    color: white;
+    background-color: black;
+}
+.btn-timer:hover {
+    color: black;
+    background-color: white;
+}
+
+.timer-value {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+.field {
+  margin-right: 30px;
+}
+.value {
+  font-size: 92px;
+  display: flex;
+}
+.label {
+  text-transform: uppercase;
+  font-size: 28px;
+}
